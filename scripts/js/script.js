@@ -1,6 +1,6 @@
 /*-----------------------------------------------------------------------------------
 
- 	Script - All Custom frontend jQuery scripts & functions
+ 	Script - custom frontend jQuery sfunctions
  
 -----------------------------------------------------------------------------------*/
 (function(){
@@ -164,10 +164,10 @@ jQuery(window).load(function() {
 	
 	
 	/*---------------------------------------------- 
-				 S C R O L L   D O W N
+				 S C R O L L   D O W N - lo key don't get why it don't work....but ok...
 	------------------------------------------------*/
-	jQuery('#scroll-down').on("click", function() { 
-		jQuery('html,body').animate({ scrollTop: jQuery("#page-body").offset().top}, 1000, 'easeInOutQuart');
+	jQuery('#scrollArrow').on("click", function() { 
+		jQuery('html,body').animate({ scrollTop: jQuery("#showcase").offset().top}, 1000, 'easeInOut');
 		return false;						   
 	});
 	
@@ -217,7 +217,7 @@ jQuery(window).load(function() {
 
 	
 	/*---------------------------------------------- 
-				W O L F   P A R A L L A X
+				W O L F   P A R A L L A X grabbed from AVOC
 	------------------------------------------------*/
 	if(jQuery().wolf) { 
 		
@@ -242,33 +242,6 @@ jQuery(window).load(function() {
 			return false;
 		});
 		
-	}
-	
-	
-	/*---------------------------------------------- 
-				   	 V I D E O   B G
-	------------------------------------------------*/
-	if(jQuery().bgVideo) { 
-		setTimeout(function() {
-			jQuery('.videobg-section').bgVideo();
-		}, 1000);
-	}
-	
-	
-	
-	/*---------------------------------------------- 
-				   	L I G H T C A S E
-	------------------------------------------------*/
-	if(jQuery().lightcase) { 
-		jQuery('a[data-rel^=lightcase]').lightcase({ 
-			showSequenceInfo: false, 
-			swipe: true, 
-			showCaption:false,
-			video: {
-				width : 780,
-				height : 420
-				}
-		});
 	}
 	
 	
@@ -315,22 +288,6 @@ jQuery(window).load(function() {
 	
 	
 	
-	
-	/*---------------------------------------------- 
-					 P A G I N A T I O N 
-	------------------------------------------------*/
-	if (jQuery('.single-pagination').length >  0 && jQuery(window).width() > 780) { 
-		var pHeight = jQuery('.single-pagination').height();
-		var pPrevHeight = jQuery('.single-pagination li.prev a').height();
-		var pNextHeight = jQuery('.single-pagination li.next a').height();
-		if (pPrevHeight < pHeight-10 && jQuery('.single-pagination li.prev a img').length >  0) { 
-			jQuery('.single-pagination li.prev ').css('marginTop',(pHeight-pPrevHeight)/2 + 'px'); }
-		if (pNextHeight < pHeight-10 && jQuery('.single-pagination li.next a img').length >  0) { 
-			jQuery('.single-pagination li.next ').css('marginTop',(pHeight-pNextHeight)/2 + 'px'); }
-	}
-	
-	
-	
 	/*---------------------------------------------- 
 				 INLINE VIDEO
 	------------------------------------------------*/
@@ -361,67 +318,7 @@ jQuery(window).load(function() {
 		thisItem.parent( ".inline-iframe-container" ).remove();
 		return false;
 	});
-	
-	
-	
-	/*---------------------------------------------- 
-				        T A B S 
-	------------------------------------------------*/	
-	jQuery(".tabs").each(function() {
-		var thisItem = jQuery(this); 
-		thisItem.find('.tab-content').removeClass('active');
-		var rel = thisItem.find('.active').attr('href');
-		thisItem.find('.'+rel).addClass('active');
-	});
-	
-	jQuery(".tab-nav").on("click", "a", function() { 
-		var thisItem = jQuery(this); 
-		var parentdiv = thisItem.parents('li').parent('ul').parent('div');
-		var rel = thisItem.attr('href');
-		
-		jQuery(parentdiv).find(".tab-nav a").removeClass("active");
-		thisItem.addClass("active");
-		
-		jQuery(parentdiv).find(".tab-container .tab-content").hide().removeClass('active');
-		jQuery(parentdiv).find(".tab-container ."+rel).fadeIn(500).addClass('active');
-		
-		return false;
-		
-	});
-	
-	
-	
-	/*---------------------------------------------- 
-			T O G G L E  &  A C C O R D I O N
-	------------------------------------------------*/		
-	jQuery(".toggle-item").each(function() {
-		jQuery(this).find('.toggle-active').siblings('.toggle-inner').slideDown(300);							
-	});
-	
-	jQuery(".toggle-item").on("click", ".toggle-title", function() { 
-		var thisItem = jQuery(this); 
-		var parentdiv = thisItem.parent('div').parent('div');
-		var active = thisItem.parent('div').find('.toggle-inner').css('display');
-		
-		if (jQuery(parentdiv).attr('class') === 'accordion') {
-			if (active !== 'none' ) { 
-				jQuery(parentdiv).find('.toggle-item .toggle-inner').slideUp(300);
-				thisItem.toggleClass('toggle-active');
-			} else {
-				jQuery(parentdiv).find('.toggle-item .toggle-inner').slideUp(300);
-				jQuery(parentdiv).find('.toggle-item .toggle-title').removeClass('toggle-active');
-				
-				thisItem.toggleClass('toggle-active');
-				thisItem.siblings('.toggle-inner').slideDown(300);
-			}
-		} else {
-			thisItem.toggleClass('toggle-active');
-			thisItem.siblings('.toggle-inner').slideToggle(300);
-		}
-		
-		return false;
-	});
-	
+
 	
 	stickyfooter();	
 		
