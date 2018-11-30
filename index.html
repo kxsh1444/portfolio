@@ -12,10 +12,17 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Marisa Lu</title>
-<!-- 
-    <link href="https://fonts.googleapis.com/css?family=Source+Code+Pro:500,600" rel="stylesheet"> -->
-<!--     <link href="https://fonts.googleapis.com/css?family=Inconsolata:400,700|Poppins:300,600" rel="stylesheet"> -->
-<!-- <link href="https://fonts.googleapis.com/css?family=Poppins:300,600|Work+Sans:300,500" rel="stylesheet"> -->
+<!-- I tried so many fonts, and adjusted the site and responsive ness for each....it took me a long time.
+    i first tried 
+    1. Quicksand
+    2. Source Code pro
+    3. Poppins
+    4. Work sans
+    5. Rubik
+
+    1. Righteous
+    2. Prototype
+-->
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Rubik:300,500" rel="stylesheet">
 
     <link rel="stylesheet" href="scripts/css/style.css" media="screen" />
@@ -66,7 +73,7 @@
 			<div class="header-inner clearfix">
 			
 	            <div id="logo" class="left-float">
-					<a id="dark-logo" class="logotype" href="index.html">LU/MAR/</a>
+					<a id="dark-logo" class="logotype" href="index.html"><strong>LU/MAR/</strong></a>
 	            </div>
             
 	            <div id="menu" class="right-float clearfix">
@@ -129,7 +136,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">Emoto AI @ Conference</h2>
+                                        <div class="thumbnail-title">Emoto AI @ Conference</div>
                                         
                                         <p class="thumbnail-description">working demo, physical computing, research</p>
                                     </div>
@@ -353,9 +360,6 @@
     <!--END .site-container-->
     </div>
 	  <script src="scripts/js/jquery-2.1.4.min.js"></script>
-<!-- 	<script type="text/javascript" src="scripts/avoc/jquery.easing.1.3.js"></script>
-	<script type="text/javascript" src="scripts/avoc/jquery.easing.compatibility.js"></script> -->
-    
 	<script type="text/javascript" src="scripts/js/script.js"></script>
 
     <script src="scripts/js/jquery.imagesloaded.min.js"></script>
@@ -368,11 +372,6 @@
                 var scrollPos = $(this).scrollTop();
                 $('.site-tagline').css({
                     'opacity' : 1-(scrollPos/250),
-                    // "webkit-filter": "blur("+scrollPos/100+"px)",
-                    // "moz-filter":"blur("+scrollPos/100+"px)",
-                    // "ms-filter":"blur("+scrollPos/100+"px)",
-                    // "o-filter":"blur("+scrollPos/100+"px)",
-                    // "filter":"blur("+scrollPos/100+"px)"
                 });
                 if(scrollPos<220){
                     $('.site-content').css({
