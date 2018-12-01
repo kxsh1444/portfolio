@@ -78,7 +78,7 @@
             <div class="cf"></div>
             
             	<div class="site-tagline">
-                	<p><span class="hoverIntro">Hello, I'm Marisa Lu.</span></br>I study <a href="#" target="_blank" class="hoverDes">Design</a> and <a href="https://www.hcii.cmu.edu/about" class="hoverHCI"target="_blank">HCI</a> at <a href="#" class="hoverCMU">CMU</a>, crafting experiences that blur digital and physical interaction.</p>
+                	<p><span class="hoverIntro">Hello, I'm Marisa Lu.</span></br>I study <a href="https://transitiondesign.net/" target="_blank" class="hoverWord" data-words = "Design,Transition Design">Design</a> and <a href="https://www.hcii.cmu.edu/about" class="hoverWord" data-words = "HCI,Human Computer Interaction" target="_blank">HCI</a> at <a href="#" class="hoverWord" data-words = "CMU,Carnegie Mellon">CMU</a>, crafting experiences that blur digital and physical interaction.</p>
             	</div>
                 <section id="scrollArrow" class="demo"><!--codepen from Naoya-->
                     <a href="#"><span></span></a>
@@ -129,7 +129,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">creative computing</h2>
+                                        <div class="thumbnail-title">creative computing</div>
                                         
                                         <p class="thumbnail-description">Interactive art + Code</p>
                                     </div>
@@ -154,7 +154,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title"> TEI '17 published paper</h2>
+                                        <div class="thumbnail-title"> TEI '17 published paper</div>
                                         
                                         <p class="thumbnail-description">AfterEffects, Wireframing, UX, Ar/Vr</p>
                                     </div>
@@ -168,11 +168,9 @@
                         <div class="thumb">
                             <div data-picture data-alt="">
                                 <div data-src="pages/portfolio4/thumbnail.jpg"></div>
-                                
                                 <!--[if (lt IE 9) & (!IEMobile)]>
                                 <div data-src="img/portfolio-4.jpg"></div>
                                 <![endif]-->
-                                
                                 <noscript>
                                     <img src="pages/portfolio4/thumbnail.jpg" alt="" />
                                 </noscript>
@@ -183,7 +181,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">Visual design winner</h2>
+                                        <div class="thumbnail-title">Visual design winner</div>
                                         <p class="thumbnail-description">Graphic, competitions, Social Media Campaign</p>
                                     </div>
                                 </div>
@@ -206,7 +204,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">Augmented Spaces</h2>
+                                        <div class="thumbnail-title">Augmented Spaces</div>
                                         
                                         <p class="thumbnail-description">VR/AR Unity, Vive, C#, sketchup</p>
                                     </div>
@@ -230,7 +228,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">Google + Linkedin<br>UI/UX</h2>
+                                        <div class="thumbnail-title">Google + Linkedin<br>UI/UX</div>
                                         
                                         <p class="thumbnail-description">sketch, wireframing, Graphics</p>
                                     </div>
@@ -253,7 +251,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title"> UX Analysis</h2>
+                                        <div class="thumbnail-title"> UX Analysis</div>
                                         
                                         <p class="thumbnail-description">Research methods, Graphic Design</p>
                                     </div>
@@ -277,7 +275,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">Hackathons</h2>
+                                        <div class="thumbnail-title">Hackathons</div>
                                         
                                         <p class="thumbnail-description">Framer.js, AngelHacks 2016, Hackathon</p>
                                     </div>
@@ -301,7 +299,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <h2 class="thumbnail-title">Generative Motion Graphics</h2>
+                                        <div class="thumbnail-title">Generative Motion Graphics</div>
                                         
                                         <p class="thumbnail-description">Unity, Processing, AfterEffects</p>
                                     </div>
@@ -363,39 +361,21 @@
                     backDelay: 1200,
                     loop: false,
                     contentType: 'html', // or text
-                    // defaults to false for infinite loop
                     loopCount: 1,
                 });
-                $('.hoverDes').mouseenter(function(){
-                    $(this).text("Design");
-                    $(this).css("color","#90D4C5");
-                    $(this).text("Spatial Systems").fadeIn();
-                })
-                $('.hoverDes').mouseleave(function(){
-                    $(this).text("Spatial Systems");
-                    $(this).css("color","#737373");
-                    $(this).text("Design").fadeIn();
-                })
-                $('.hoverHCI').mouseenter(function(){
-                    $(this).text("HCI");
-                    $(this).css("color","#90D4C5");
-                    $(this).text("Human Computer Interaction").fadeIn();
-                })
-                $('.hoverHCI').mouseleave(function(){
-                    $(this).text("Human Computer Interaction");
-                    $(this).css("color","#737373");
-                    $(this).text("HCI").fadeIn();
-                })
-                $('.hoverCMU').mouseenter(function(){
-                    $(this).text("CMU");
-                    $(this).css("color","#90D4C5");
-                    $(this).text("Carnegie Mellon").fadeIn();
-                })
-                $('.hoverCMU').mouseleave(function(){
-                    $(this).text("Carnegie Mellon");
-                    $(this).css("color","#737373");
-                    $(this).text("CMU").fadeIn();
-                })
+
+                //On hover change words, learned about data- tag! yay!
+                var specialWords = document.getElementsByClassName("hoverWord");
+                for(let word of specialWords){
+                    word.addEventListener('mouseenter', function(){
+                        this.innerHTML = this.getAttribute('data-words').split(",")[1];
+                        this.style.color = "#90D4C5";
+                    });
+                    word.addEventListener('mouseleave', function(){
+                        this.innerHTML = this.getAttribute('data-words').split(",")[0];
+                        this.style.color = "#737373";
+                    });
+                }
             });
         </script>
  

@@ -1210,12 +1210,8 @@ pre {
 }
 @-webkit-keyframes typing { from { width: 0; } }
 @-webkit-keyframes blink-caret { 50% { border-color: transparent; } }
-.site-tagline .hoverDes{
-    transition: color 0.5s;
-    /*@-webkit-keyframes typing { from { width: 0 } to{ width:100% } }
-    @-webkit-keyframes blink-caret { from, to { border-color: transparent; } 50% { border-color: orange;}}
-    -webkit-animation: typing 2s steps(28, end),
-    blink-caret .5s step-end infinite alternate;*/
+.site-tagline .hoverWord{
+    transition: color 1s;
 }.site-tagline .hoverHCI{
     transition: color 0.5s;
 }.site-tagline .hoverCMU{
