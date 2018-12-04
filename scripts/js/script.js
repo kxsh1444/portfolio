@@ -24,7 +24,7 @@ function reorganizeIsotope() {
 }
 
 
-// STICKY FOTTER OPTION
+// STICKY FOTTER to be finished later...
 function stickyfooter() {
 	var footerHeight = jQuery("footer").height();
 	jQuery("#page-content").css({'minHeight': jQuery(window).height()+'px'});
@@ -94,8 +94,6 @@ jQuery(window).load(function() {
 	}
 	
 	
-	
-	
 	if( jQuery().isotope ) {
 		
 		/*---------------------------------------------- 
@@ -111,8 +109,6 @@ jQuery(window).load(function() {
 				});	
 			});
 		});
-		
-		
 		/*---------------------------------------------- 
 					 I S O T O P E : Filter
 		------------------------------------------------*/
@@ -134,13 +130,9 @@ jQuery(window).load(function() {
 		jQuery(window).resize(function() {
 			reorganizeIsotope();
 		});
-		
-		
 	} /* END if isotope */
 		
-	
-	
-	
+
 	/*---------------------------------------------- 
 					 O P E N   N A V 
 	------------------------------------------------*/
@@ -148,9 +140,6 @@ jQuery(window).load(function() {
 		jQuery('header').toggleClass('nav-is-open'); 
 		return false;
 	});
-	
-	
-	
 	
 	/*---------------------------------------------- 
 				 B A C K   T O P   T O P
@@ -160,61 +149,13 @@ jQuery(window).load(function() {
 		return false;						   
 	});
 	
-	
-	
-	
 	/*---------------------------------------------- 
-				 S C R O L L   D O W N - lo key don't get why it don't work....but ok...
+				 S C R O L L   D O W N - lo key don't get why it don't work...probably has to do with my jquery version, but i have dependencies from other parts that need it...
 	------------------------------------------------*/
 	jQuery('#scrollArrow').on("click", function() { 
 		jQuery('html,body').animate({ scrollTop: jQuery("#showcase").offset().top}, 1000, 'easeInOut');
 		return false;						   
 	});
-	
-
-
-	
-	
-	/*---------------------------------------------- 
-			 O W L   C A R O U S E L
-	------------------------------------------------*/
-	if(jQuery().owlCarousel) {
-		
-		jQuery(".owl-slider").owlCarousel({
-			items:1,
-			stopOnHover : true,
-			nav: true,
-			navText:false,
-			dots: false,
-			smartSpeed : 800,			
-			singleItem : true,
-			autoHeight : true,
-			loop: false,
-			autoplay: false,
-			navRewind: false,
-			onTranslated: function () {
-				jQuery(".owl-slider .owl-slider-caption").removeClass("active");
-				jQuery(".owl-slider .owl-item.active .owl-slider-caption").addClass("active");
-				
-				if (jQuery(".owl-slider.hero-slider .owl-item.active .slider-item").hasClass("text-light")) {
-					jQuery("#logo").addClass("show-light-logo");	
-					jQuery("#menu").addClass("menu-light");	
-					jQuery(".owl-slider.hero-slider").addClass("nav-light");	
-				} else {
-					jQuery("#logo").removeClass("show-light-logo");	
-					jQuery("#menu").removeClass("menu-light");	
-					jQuery(".owl-slider.hero-slider").removeClass("nav-light");	
-				}
-			},
-			onInitialized: function () {
-				jQuery(".owl-slider .owl-item.active .owl-slider-caption").addClass("active");
-			}
-		});
-				
-	}
-	
-		
-
 	
 	/*---------------------------------------------- 
 				W O L F   P A R A L L A X grabbed from AVOC
@@ -319,7 +260,6 @@ jQuery(window).load(function() {
 		return false;
 	});
 
-	
 	stickyfooter();	
 		
 });
