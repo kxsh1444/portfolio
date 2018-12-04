@@ -11,7 +11,6 @@
 /*      - Titles
 /*		- Column Grids / Spacer
 /*		- Horizontal
-/*		- Inline Video
 /*	    - HERO / PAGETITLE
 /*      - Navigation Styles
 /*      - Projects Feed - Grid look from MIT MEDia labs and LEvent Usta! Microinteractions from me
@@ -520,7 +519,7 @@ header.header-open nav#main-nav ul > li { transition: none; top: 0px; opacity: 1
 12. HORIZONTAL SECTIONS
 ------------------------------------------------*/
 .horizontal-section .horizontal-inner {
-	padding: 120px 0;
+	padding: 200px 0;
 }
 /*---------------------------------------------- 
 14. COLUMNS GRID
@@ -824,11 +823,9 @@ header.header-open:not(.header-transparent) + #hero, header.header-open:not(.hea
 
 /*-----HERO HEADERS-----*/
 
-/*=====================END OF CUSTOM SCRIPT============*//*=================================*//*=================================*//*=================================*//*=================================*//*=================================*/
-
 * { box-sizing: border-box; }
 html {
-    font-family: sans-serif; /* 1 */
+    font-family: 'Rubik', sans-serif, Arial, sans-serif;
     -ms-text-size-adjust: 100%; /* 2 */
     -webkit-text-size-adjust: 100%; /* 2 */
 }
@@ -1020,39 +1017,7 @@ pre {
 .site-tagline .hoverWord{
     transition: color 1s;
  }
-/*=================================*/
-/* Language Styles
-/*=================================*/
-.languages {
-    position: relative;
-    z-index: 1;
-    float: right;
-    -webkit-transition: -webkit-transform 0.5s;
-    -moz-transition: -moz-transform 0.5s;
-    transition: transform 0.5s;
-}
-.languages ul {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-}
-.languages ul li {
-    display: inline-block;
-    margin: 0;
-}
-.languages ul li a {
-    color: #8e8e8e;
-    font-weight: 500;
-    font-size: 14px;
-    line-height: 14px;
-}
-.languages ul li a:hover {
-    color: #90D4C5; 
-}
 
-.languages ul li.active a {
-    color: #2c2c2c;
-}
 /*===== Projects Feed =====leventausta*/
 .projects-feed {clear: both;}
 .projects-feed .project {
