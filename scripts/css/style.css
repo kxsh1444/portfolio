@@ -1050,8 +1050,10 @@ pre {
 }*/
 .projects-feed .project:hover {
 	z-index:98;
-	box-shadow: 4px 15px 110px 0 rgba(0,0,0,0.15);
-	transform: scale(1.01);
+	box-shadow: 4px 15px 105px 0 rgba(0,0,0,0.13);
+}
+.projects-feed .project:hover .table-cell, .projects-feed .project:hover .thumb img{
+	transform: scale(1.03);
 }
 .projects-feed .project-content-container {
     position: relative;
@@ -1116,6 +1118,7 @@ pre {
 .thumb img {
     width: 100%;
     height: auto;
+    z-index:1;
 }
 div.image,
 div.code,
@@ -1472,6 +1475,7 @@ width:100%;
     .projects-feed .project-content-container {
         float: left;
         width: 50%;
+        background: white;
     }
     .projects-feed .project-content-container { padding-bottom: 50%; }
     .projects-feed .project:nth-child(2n) .thumb { float: right; }
