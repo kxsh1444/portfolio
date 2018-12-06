@@ -1027,6 +1027,7 @@ pre {
     position: relative;
     transition: box-shadow 0.1s;
     width: 100%;
+    z-index: 89;
 }
 .no-js .projects-feed .project,
 .projects-feed .loaded {
