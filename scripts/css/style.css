@@ -1025,7 +1025,7 @@ pre {
     opacity: 0;
     overflow: hidden;
     position: relative;
-    transition: box-shadow 0.1s;
+    transition: all 0.1s;
     width: 100%;
     z-index: 89;
 }
@@ -1050,8 +1050,8 @@ pre {
 }*/
 .projects-feed .project:hover {
 	z-index:98;
-	box-shadow: 4px 15px 120px 0 rgba(0,0,0,0.5);/*
-	transform: scale(1.01);*/
+	box-shadow: 4px 15px 110px 0 rgba(0,0,0,0.15);
+	transform: scale(1.01);
 }
 .projects-feed .project-content-container {
     position: relative;
