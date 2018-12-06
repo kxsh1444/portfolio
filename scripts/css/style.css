@@ -1025,7 +1025,7 @@ pre {
     opacity: 0;
     overflow: hidden;
     position: relative;
-    transition: all 0.1s;
+/*    transition: box-shadow 0.3s;*/
     width: 100%;
     z-index: 89;
 }
@@ -1050,10 +1050,10 @@ pre {
 }*/
 .projects-feed .project:hover {
 	z-index:98;
-	box-shadow: 4px 15px 105px 0 rgba(0,0,0,0.13);
+	box-shadow: 4px 10px 110px 0 rgba(0,0,0,0.18);
 }
 .projects-feed .project:hover .table-cell, .projects-feed .project:hover .thumb img{
-	transform: scale(1.03);
+	transform: scale(1.02);
 }
 .projects-feed .project-content-container {
     position: relative;
@@ -1088,6 +1088,7 @@ pre {
     width: 100%;
     vertical-align: middle;
     text-align:center;/*TBD*/
+    /*transition: transform 0.1s ease-out;*/
 }
 .thumbnail-title {
     color: #2c2c2c;
@@ -1118,7 +1119,7 @@ pre {
 .thumb img {
     width: 100%;
     height: auto;
-    z-index:1;
+ /*   transition: transform 0.1s ease-out;*/
 }
 div.image,
 div.code,
