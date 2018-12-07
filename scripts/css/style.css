@@ -1061,15 +1061,15 @@ pre {
     padding-bottom: 100%;
 }
 .projects-feed .project-content-container::before {
-    border-left: 22px solid transparent;
-    border-right: 22px solid transparent;
-    border-bottom: 22px solid #fff;
+    border-left: 28px solid transparent;
+    border-right: 28px solid transparent;
+    border-bottom: 28px solid #fff;
     content: '';
     display: block;
     height: 0;
     margin: auto;
     position: absolute;
-    top: -22px; left: 0; right: 0;
+    top: -28px; left: 0; right: 0;
     width: 0;
 }
 .projects-feed .project-content {
@@ -1651,27 +1651,27 @@ width:100%;
     .projects-feed .project:nth-child(3n+2) .project-content-container { padding-bottom: 100%; }
     /* Thumb on the left */
     .projects-feed .project:nth-child(3n+1) .project-content-container::before {
-        border-top: 22px solid transparent;
+        border-top: 28px solid transparent;
         border-left: none;
-        border-bottom: 22px solid transparent;
-        border-right: 22px solid #fff;
-            left: -22px; top: 0; bottom: 0; right: initial;
+        border-bottom: 28px solid transparent;
+        border-right: 28px solid #fff;
+            left: -28px; top: 0; bottom: 0; right: initial;
     }
     /* Thumb on the top */
     .projects-feed .project:nth-child(3n+2) .project-content-container::before {
-        border-left: 22px solid transparent;
+        border-left: 28px solid transparent;
         border-top: none;
-        border-right: 22px solid transparent;
-        border-bottom: 22px solid #fff;
-            left: 0; top: -22px; bottom: initial; right: 0;
+        border-right: 28px solid transparent;
+        border-bottom: 28px solid #fff;
+            left: 0; top: -28px; bottom: initial; right: 0;
     }
     /* Thumb on the right */
     .projects-feed .project:nth-child(3n+3) .project-content-container::before {
-        border-top: 22px solid transparent;
+        border-top: 28px solid transparent;
         border-right: none;
-        border-bottom: 22px solid transparent;
-        border-left: 22px solid #fff;
-            left: initial; top: 0; bottom: 0; right: -22px;
+        border-bottom: 28px solid transparent;
+        border-left: 28px solid #fff;
+            left: initial; top: 0; bottom: 0; right: -28px;
     }
     /*===== Paginations =====*/
 
