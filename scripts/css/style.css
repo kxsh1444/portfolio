@@ -206,7 +206,8 @@ header #logo {
 	height: 30px;								
 	position: relative;
 	z-index: 10;
-	}
+	letter-spacing: 0.3em;
+}
 
 header #logo #dark-logo + #light-logo {
 	position: absolute;
@@ -214,9 +215,7 @@ header #logo #dark-logo + #light-logo {
 	left: 0;
 	height: 100%;
 	opacity: 0; filter: alpha(opacity=0); -ms-filter:"progid:DXImageTransform.Microsoft.Alpha(Opacity=0)";
-	}
-	
-header #logo img { max-height: 100%; }
+}
 
 
 /* switching logos */
