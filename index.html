@@ -12,17 +12,6 @@
     <meta name="viewport" content="width=device-width" />
     <meta http-equiv="x-ua-compatible" content="ie=edge">
     <title>Marisa Lu</title>
-<!-- I tried so many fonts, and adjusted the site and responsive ness for each....it took me a long time.
-    i first tried 
-    1. Quicksand
-    2. Source Code pro
-    3. Poppins
-    4. Work sans
-    5. Rubik
-
-    1. Righteous
-    2. Prototype
--->
 <link href="https://fonts.googleapis.com/css?family=Poppins:400,600|Rubik:300,500" rel="stylesheet">
 
     <link rel="stylesheet" href="scripts/css/style.css" media="screen" />
@@ -53,12 +42,12 @@
 	                            	<li><p style="text-align:left;color:white; font-family: 'quicksand', Arial, sans-serif;font-size: 0.8em;">Design 'folio of fully documented projects</p></li>
 	                            </ul>
 	                        </li>
-							<li><a href="experiments/index.html">Computation</a>
+							<li><a href="pages/computation/index.html">Computation</a>
                                 <ul class="submenu">
                                     <li><p style="text-align:left; color:white; font-family: 'quicksand', Arial, sans-serif;font-size: 0.8em;">Sensors/signal processing, generative art + experimental apps </p></li>
 	                            </ul>
                             </li>
-                            <li><a href="https://www.artstation.com/mohahamarisa/albums/all" target="_blank">Art</a>
+                            <li><a href="pages/art/index.html" target="_blank">Art</a>
 							    <ul class="submenu">
 							        <li><p style="text-align:left; color:white; font-family: 'quicksand', Arial, sans-serif;font-size: 0.8em;">Exhibition pieces, illustration, + sketchbooks</p></li>
 							    </ul>
@@ -67,7 +56,6 @@
 							<li><a href="LuMarisaResume.pdf" target="_blank">Resume</a></li>
 	                    </ul>
 	            	</nav>
-                
 	            </div>
                     
 			</div> <!-- END .header-inner -->
@@ -78,7 +66,7 @@
             <div class="cf"></div>
             
             	<div class="site-tagline">
-                	<p><span class="hoverIntro">Hello, I'm Marisa Lu.</span></br>I study <a href="https://transitiondesign.net/" target="_blank" class="hoverWord" data-words = "Design,Transition Design">Design</a> and <a href="https://www.hcii.cmu.edu/about" class="hoverWord" data-words = "HCI,Human Computer Interaction" target="_blank">HCI</a> at <a href="#" class="hoverWord" data-words = "CMU,Carnegie Mellon University">CMU</a>, crafting experiences that blur <a href="#" class="hoverWord" data-words = "digital,software">digital</a> and physical interaction.</p>
+                	<p><span class="hoverIntro">Hello, I'm Marisa Lu.</span></br>I study <a href="https://transitiondesign.net/" target="_blank" class="hoverWord" data-words = "Design|system-making">Design</a> and <a href="https://www.hcii.cmu.edu/about" class="hoverWord" data-words = "HCI|Human Computer Interaction" target="_blank">HCI</a> at <a href="#" class="hoverWord" data-words = "CMU|Carnegie Mellon University">CMU</a>, crafting experiences that blur <a href="#" class="hoverWord" data-words = "digital|software">digital</a> and physical interaction.</p>
             	</div>
                 <section id="scrollArrow" class="demo"><!--codepen from Naoya-->
                     <a href="#"><span></span></a>
@@ -266,7 +254,6 @@
                         <div class="thumb">
                             <div data-picture data-alt="">
                                 <div data-src="pages/portfolio8/thumbnail.jpg"></div>
-                                
                                 <noscript>
                                     <img src="pages/portfolio8/thumbnail.jpg" alt="" />
                                 </noscript>
@@ -300,8 +287,7 @@
                             <div class="project-content">
                                 <div class="table">
                                     <div class="table-cell">
-                                        <div class="thumbnail-title">Generative Motion Graphics</div>
-                                        
+                                        <div class="thumbnail-title">Generative Motion Graphics</div>   
                                         <p class="thumbnail-description">Unity, Processing, AfterEffects</p>
                                     </div>
                                 </div>
@@ -330,55 +316,19 @@
     <script type = "text/javascript" src = "scripts/js/vanillaTilt.js"></script>
 
     <script>
-            $(document).scroll(function(){
-                var scrollPos = $(this).scrollTop();
-                $('.site-tagline').css({
-                    'opacity' : 1-(scrollPos/250),
-                });
-                if(scrollPos<220){
-                    $('.site-content').css({
-                        "webkit-filter": "blur("+90/(0.1*scrollPos**1.2+1)+"px)",
-                        "moz-filter":"blur("+90/(0.1*scrollPos**1.2+1)+"px)",
-                        "ms-filter":"blur("+90/(0.1*scrollPos**1.2+1)+"px)",
-                        "o-filter":"blur("+90/(0.1*scrollPos**1.2+1)+"px)",
-                        "filter":"blur("+90/(0.1*scrollPos**1.2+1)+"px)"
-                    }); 
-                }else{
-                    $('.site-content').css({
-                        "webkit-filter": "blur(0px)",
-                        "moz-filter":"blur(0px)",
-                        "ms-filter":"blur(0px)",
-                        "o-filter":"blur(0px)",
-                        "filter":"blur(0px)"
-                    }); 
-                }
-
+        $(document).ready(function(){
+            // Typed.js | Copyright (c) 2016 Matt Boldt | www.mattboldt.com
+            Typed.new('.hoverIntro', {
+                strings: ["Oh, hello! ", "I'm Marisa Lu."],
+                typeSpeed:95,
+                backDelay: 1200,
+                loop: false,
+                contentType: 'html', // or text
+                loopCount: 1,
             });
-            $(document).ready(function(){
-                // Typed.js | Copyright (c) 2016 Matt Boldt | www.mattboldt.com
-                Typed.new('.hoverIntro', {
-                    strings: ["Oh, hello! ", "I'm Marisa Lu."],
-                    typeSpeed:95,
-                    backDelay: 1200,
-                    loop: false,
-                    contentType: 'html', // or text
-                    loopCount: 1,
-                });
-
-                //On hover change words, learned about data- tag! yay!
-                var specialWords = document.getElementsByClassName("hoverWord");
-                for(let word of specialWords){
-                    word.addEventListener('mouseenter', function(){
-                        this.innerHTML = this.getAttribute('data-words').split(",")[1];
-                        this.style.color = "#90D4C5";
-                    });
-                    word.addEventListener('mouseleave', function(){
-                        this.innerHTML = this.getAttribute('data-words').split(",")[0];
-                        this.style.color = "#737373";
-                    });
-                }
-            });
-        </script>
+            //this is specific to just the intro page so i leave it here
+        });
+    </script>
  
 
 </body>
