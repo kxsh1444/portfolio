@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg width="525px" height="555px" viewBox="0 0 525 555" version="1.1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink">
+    <!-- Generator: Sketch 47.1 (45422) - http://www.bohemiancoding.com/sketch -->
+    <title>ledge</title>
+    <desc>Created with Sketch.</desc>
+    <defs>
+        <linearGradient x1="58.9192271%" y1="115.129485%" x2="58.9192271%" y2="55.9968171%" id="linearGradient-1">
+            <stop stop-color="#D9744D" offset="0%"></stop>
+            <stop stop-color="#C2552B" offset="100%"></stop>
+        </linearGradient>
+        <linearGradient x1="50%" y1="0%" x2="50%" y2="100%" id="linearGradient-2">
+            <stop stop-color="#273131" offset="0%"></stop>
+            <stop stop-color="#515D67" offset="100%"></stop>
+        </linearGradient>
+    </defs>
+    <g id="Page-1" stroke="none" stroke-width="1" fill="none" fill-rule="evenodd">
+        <g id="ledge">
+            <g id="Group">
+                <rect id="Rectangle" fill="#D9744D" x="59" y="512" width="191" height="43"></rect>
+                <rect id="Rectangle" x="0" y="499" width="315" height="56"></rect>
+                <path d="M173.611316,538.498057 L226.706988,538.498057 L226.706988,554.952769 L268.375037,554.952769 L268.375037,538.498057 C277.201516,538.938097 281.78028,538.938097 282.111328,538.498057 C278.466797,518.464196 288.423177,508.447266 311.980469,508.447266 L314.793847,495.499304 L167.088155,511.801602 L166.318303,520.80839 L158.121898,511.801602 L11.6171875,496.926758 L11.6171875,508.832031 C36.0546875,510.811745 46.483724,520.70042 42.9042969,538.498057 C43.2353454,538.938097 47.8789185,538.938097 56.8350162,538.498057 L56.8350162,554.952769 L98.5030648,554.952769 L98.5030648,538.498057 L173.611316,538.498057 Z" id="Combined-Shape" fill="url(#linearGradient-1)"></path>
+                <polygon id="Path-26" fill="#344244" points="33.8002715 490.168533 33.8002715 495.265989 11.3953788 497.124985 11.3953788 508.5112 24.2192106 510.585234 295.802624 510.585234 314.474622 508.5112 314.474622 495.265989 292.917772 495.265989 292.917772 490.168533"></polygon>
+                <rect id="Rectangle-7" fill="#4D606E" x="33.0188679" y="489.940594" width="259.748428" height="5.5049505"></rect>
+                <rect id="Rectangle-7" fill="#4D606E" x="11.0062893" y="496.546535" width="303.773585" height="5.5049505"></rect>
+                <path d="M12.0402786,509.126207 C30.2909419,511.226403 40.0755045,515.505642 41.3939662,521.963923 C42.4100416,521.963923 122.975219,521.963923 283.0895,521.963923 C284.882321,513.405446 295.336146,509.126207 314.450975,509.126207 C333.565804,509.126207 232.762239,509.126207 12.0402786,509.126207 Z" id="Path-25" fill="#585858"></path>
+                <rect id="Rectangle-8" fill="url(#linearGradient-2)" x="58.3333333" y="503.152475" width="36.3207547" height="42.9386139"></rect>
+                <rect id="Rectangle-8" fill="url(#linearGradient-2)" x="228.930818" y="503.152475" width="36.3207547" height="42.9386139"></rect>
+                <path d="M293.490658,489.412678 L33.4896448,489.412678" id="Path-36" stroke="#F0A182" opacity="0.56714221"></path>
+                <rect id="Rectangle-12" opacity="0.119168931" x="364.308176" y="0" width="160.691824" height="96.8871287"></rect>
+            </g>
+        </g>
+    </g>
+</svg>
