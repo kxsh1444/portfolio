@@ -76,18 +76,31 @@ jQuery(window).load(function() {
 
 	
 	/*---------------------------------------------- 
-			H I D E   P A G E   L O A D E R  + S M O O T H   S H O W
+			HIDE PAGE LAODER AND SMOOTH SHOW
 	------------------------------------------------*/
 	jQuery("#page-loader .page-loader-inner").delay(500).fadeIn(10, function(){
 		jQuery(this).fadeOut(500,function() {
 			jQuery("#page-loader").fadeOut(500);
 		});
 	});
-		
-	
-	
 	/*---------------------------------------------- 
-				   	 P A R A L L A X
+			HOVER OVER WORDS FOR EXAPNDED STUFF
+	------------------------------------------------*/
+
+                //On hover change words, learned about data- tag! yay!
+                var specialWords = document.getElementsByClassName("hoverWord");
+                for(let word of specialWords){
+                    word.addEventListener('mouseenter', function(){
+                        this.innerHTML = this.getAttribute('data-words').split("|")[1];
+                        this.style.color = "#90D4C5";
+                    });
+                    word.addEventListener('mouseleave', function(){
+                        this.innerHTML = this.getAttribute('data-words').split("|")[0];
+                        this.style.color = "#737373";
+                    });
+                }
+	/*---------------------------------------------- 
+		PARALLAX TO BE IMPLEMENTED
 	------------------------------------------------*/
 	if(jQuery().parallax) { 
 		jQuery('.parallax-section').parallax();
@@ -97,7 +110,7 @@ jQuery(window).load(function() {
 	if( jQuery().isotope ) {
 		
 		/*---------------------------------------------- 
-					  C A L L   I S O T O P E   
+					  CALL ISOTOPPPEE   
 		------------------------------------------------*/	
 		jQuery('.masonry').each(function(){
 			var $container = jQuery(this);
@@ -110,7 +123,7 @@ jQuery(window).load(function() {
 			});
 		});
 		/*---------------------------------------------- 
-					 I S O T O P E : Filter
+					 ISOTOPE: FILTER
 		------------------------------------------------*/
 		jQuery('.masonry-filter').on("click", "li a", function() { 
 			var thisItem = jQuery(this);
@@ -134,19 +147,11 @@ jQuery(window).load(function() {
 		
 
 	/*---------------------------------------------- 
-					 O P E N   N A V 
+		OPEN NAV
 	------------------------------------------------*/
 	jQuery('header').on("click", ".open-nav", function() { 
 		jQuery('header').toggleClass('nav-is-open'); 
 		return false;
-	});
-	
-	/*---------------------------------------------- 
-				 B A C K   T O P   T O P
-	------------------------------------------------*/
-	jQuery('#backtotop').on("click", function() { 
-		jQuery('html, body').animate({scrollTop: 0}, 1000, 'easeInOutQuart');
-		return false;						   
 	});
 	
 	/*---------------------------------------------- 
@@ -163,8 +168,6 @@ jQuery(window).load(function() {
 	if(jQuery().wolf) { 
 		
 		jQuery('.wolf-grid').wolf();
-		
-		
 		/*---------------------------------------------- 
 					 W O L F : Filter
 		------------------------------------------------*/
@@ -190,13 +193,27 @@ jQuery(window).load(function() {
 				H E A D E R   O P T I O N 
 				   (hide/show elements)
 	------------------------------------------------*/
-	/* add class to header if hero-invisible */
 	jQuery(window).scroll(function() { 
-		if (jQuery( window ).scrollTop() +50 > jQuery("#hero").height()) {
-			jQuery('header').addClass("hero-invisible");
-		} else {
-			jQuery('header').removeClass("hero-invisible");
-		}
+		var scrollPos = jQuery( window ).scrollTop();
+            $('.site-tagline').css({
+                'opacity' : 1-(scrollPos/250),
+            });
+            if(scrollPos<200){
+                $('.site-content').css({
+                    "webkit-filter": "blur("+80/(0.1*scrollPos**1.2+1)+"px)",
+                    "moz-filter":"blur("+80/(0.1*scrollPos**1.2+1)+"px)",
+                    "ms-filter":"blur("+80/(0.1*scrollPos**1.2+1)+"px)",
+                    "o-filter":"blur("+80/(0.1*scrollPos**1.2+1)+"px)",
+                    "filter":"blur("+80/(0.1*scrollPos**1.2+1)+"px)"
+                    }); 
+                }else{$('.site-content').css({
+                    "webkit-filter": "blur(0px)",
+                    "moz-filter":"blur(0px)",
+                    "ms-filter":"blur(0px)",
+                    "o-filter":"blur(0px)",
+                    "filter":"blur(0px)"
+                }); 
+            }
 	});
 		
 	
