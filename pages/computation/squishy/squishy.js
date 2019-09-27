@@ -50,18 +50,12 @@ function draw() {
   t+=1/1000;
 }
 function mousePressed(){
-if(clickCount<1){
+
+  if(clickCount<1){
     clickCount++;
     background(240,230,230);
-//     text('press RETURN to save drawing, SPACE to clear',0.1*width, height*0.48, 0.8*width, height);
-}else if(clickCount>=1){
-//     background(240,230,230);
-//     activated = !activated;
-//     clickCount++;
-      activated = true;
   }
-//   else{activated = !activated;}
-
+  activated = true;
 
 }
 function mouseReleased(){
