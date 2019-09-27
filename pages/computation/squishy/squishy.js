@@ -51,7 +51,7 @@ function draw() {
 }
 function mousePressed(){
 
-  if(clickCount<1){
+  if(clickCount==0){
     clickCount++;
     background(240,230,230);
   }
