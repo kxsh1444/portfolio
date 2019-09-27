@@ -58,8 +58,11 @@ if(clickCount<1){
 //     background(240,230,230);
 //     activated = !activated;
 //     clickCount++;
-//   }else{activated = !activated;}
-  activated = true;
+      activated = true;
+  }
+//   else{activated = !activated;}
+
+
 }
 function mouseReleased(){
   activated = false;
