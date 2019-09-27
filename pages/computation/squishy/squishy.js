@@ -19,7 +19,7 @@ function setup() {
   textAlign(CENTER);
   textSize(24);
   fill(200,180,180);
-  text('click anywhere to activate/deactivate',0.1*width, height*0.48, 0.8*width, height);
+  text('press RETURN to save drawing, SPACE to clear',0.1*width, height*0.48, 0.8*width, height);
 }
 
 function draw() {
@@ -50,16 +50,19 @@ function draw() {
   t+=1/1000;
 }
 function mousePressed(){
-  if(clickCount<1){
-    clickCount++;
-    background(240,230,230);
-    text('press RETURN to save drawing, SPACE to clear',0.1*width, height*0.48, 0.8*width, height);
-  }else if(clickCount==1){
-    background(240,230,230);
-    activated = !activated;
-    clickCount++;
-  }else{activated = !activated;}
-
+//   if(clickCount<1){
+//     clickCount++;
+//     background(240,230,230);
+//     text('press RETURN to save drawing, SPACE to clear',0.1*width, height*0.48, 0.8*width, height);
+//   }else if(clickCount==1){
+//     background(240,230,230);
+//     activated = !activated;
+//     clickCount++;
+//   }else{activated = !activated;}
+  activated = true;
+}
+function mouseReleased(){
+  activated = false;
 }
 function keyPressed(){
   if(keyCode===RETURN){
