@@ -59,6 +59,7 @@ function mousePressed(){
 
 }
 function mouseReleased(){
+  console.log("released");
   activated = false;
 }
 function keyPressed(){
