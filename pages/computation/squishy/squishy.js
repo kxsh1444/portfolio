@@ -50,7 +50,7 @@ function draw() {
   t+=1/1000;
 }
 function mousePressed(){
-
+  console.log("pressed");
   if(clickCount==0){
     clickCount++;
     background(240,230,230);
