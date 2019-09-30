@@ -56,7 +56,10 @@ function mousePressed(){
     background(240,230,230);
   }
   activated = true;
-
+}
+function touchMoved(){
+  console.log("touchMove");
+  activated = true;
 }
 function mouseReleased(){
   console.log("released");
